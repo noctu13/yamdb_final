@@ -8,7 +8,6 @@ from rest_framework import (
     viewsets,
     generics,
     filters,
-    pagination,
     mixins,
     status,
 )

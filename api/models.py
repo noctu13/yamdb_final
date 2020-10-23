@@ -50,7 +50,8 @@ class Client(AbstractUser):
         max_length=150,
         unique=True,
         help_text=_(
-            "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+            "Required. 150 characters or fewer. Letters, digits and "
+            "@/./+/-/_ only."
         ),
         validators=[UnicodeUsernameValidator()],
         error_messages={
@@ -60,7 +61,9 @@ class Client(AbstractUser):
         null=True,
     )
     role = models.CharField(
-        max_length=10, choices=Role.choices, default=Role.USER,
+        max_length=10,
+        choices=Role.choices,
+        default=Role.USER,
     )
     bio = models.TextField(blank=True)
     confirmation_code = models.CharField(max_length=12, null=True)
