@@ -12,7 +12,7 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
+    image: noctu13/yamdb:v1.0f
     restart: always
     volumes:
       - static_data:/code/static
