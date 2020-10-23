@@ -1,7 +1,6 @@
 name: Yamdb-app workflow
 
-on:
-  push:
+on: [push]
     branches: [ master ]
 
 jobs:
@@ -22,7 +21,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Lint with flake8
-      run: flake8 .
+      run: flake8 . --exclude=tests
 
     - name: Test with pytest
       run: pytest
