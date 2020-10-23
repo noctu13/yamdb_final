@@ -28,5 +28,7 @@ services:
       - static_data:/usr/share/nginx/html/static:ro
     ports:
       - 80:80
+    env_file:
+      - ./.env
     depends_on:
       - web
