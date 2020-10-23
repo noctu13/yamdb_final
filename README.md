@@ -11,18 +11,9 @@ Download [Docker Desktop](https://www.docker.com/products/docker-desktop) for Ma
 
 specify the following environment variables for .env
 
-    SECRET_KEY - set your own key
-    DB_ENGINE=django.db.backends.postgresql
-    DB_NAME=postgres
-    DB_HOST=db
-    DB_PORT=5432
-
-See details [Django settings: DATABASES](https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-DATABASES)
-
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD - set your own password
-
-See details [Postgres: Environment Variables](https://hub.docker.com/_/postgres)
+    NGINX_PORT=80
+    NGINX_IP=0.0.0.0
+    NGINX_HOST=http://web:8000
 
 Run in this directory:
 
@@ -32,7 +23,7 @@ Install migrations by executing the "startup.sh" script:
 
     docker-compose exec web startup.sh
 
-The app will be running at [http://localhost:8000](http://localhost:8000)
+The app will be running at [http://localhost:80](http://localhost:80)
 
 ## Run tests
 
@@ -42,7 +33,7 @@ You can run the Django tests within the running web container by doing this:
 
 ## Workflow
 
-![yamdb_workflow Actions Status](https://github.com/noctu13/yamdb_final/workflows/yamdb_workflow/badge.svg)
+![name_worklow Actions Status](https://github.com/noctu13/yamdb_final/workflows/yamdb-app_workflow/badge.svg)
 
 ## Other commands
 

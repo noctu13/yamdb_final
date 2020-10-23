@@ -1,4 +1,4 @@
-name: Yamdb-app workflow
+name: yamdb-app_workflow
 
 on: [push]
 
