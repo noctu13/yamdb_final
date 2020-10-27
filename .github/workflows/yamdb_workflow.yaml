@@ -53,6 +53,7 @@ jobs:
           cp ~/env/yamdb.env ~/yamdb/.env
           cd ~/yamdb
           sudo docker-compose up -d
+          sudo docker-compose exec web startup.sh
 
   send_message:
     runs-on: ubuntu-latest
