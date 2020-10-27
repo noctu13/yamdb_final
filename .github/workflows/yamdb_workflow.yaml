@@ -19,8 +19,10 @@ jobs:
     - name: Lint with flake8
       run: flake8 . --exclude=tests
     - name: Test with pytest
+      env:
+        SECRET_KEY: "test"
       run: pytest
-    
+
   scp:
     runs-on: ubuntu-latest
     needs: tests
@@ -48,6 +50,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
+          cp ~/env/yamdb.env ~/yamdb/.env
           cd ~/yamdb
           sudo docker-compose up
 
