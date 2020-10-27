@@ -54,7 +54,7 @@ jobs:
           cd ~/yamdb
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker-compose up -d
-          sudo docker-compose exec web startup.sh
+          sudo docker-compose exec -T web ./startup.sh
 
   send_message:
     runs-on: ubuntu-latest
