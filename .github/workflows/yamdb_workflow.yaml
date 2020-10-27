@@ -52,7 +52,7 @@ jobs:
         script: |
           cp ~/env/yamdb.env ~/yamdb/.env
           cd ~/yamdb
-          sudo docker-compose up
+          sudo docker-compose up -d
 
   send_message:
     runs-on: ubuntu-latest
